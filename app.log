@@ -1,0 +1,306 @@
+2025-03-27 09:01:09,742 - INFO - Chatbot model initialized successfully
+2025-03-27 09:01:09,773 - INFO - Database initialized successfully
+2025-03-27 09:01:09,834 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-27 09:01:09,836 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-27 09:01:09,875 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-27 09:01:30,495 - INFO - Chatbot model initialized successfully
+2025-03-27 09:01:30,513 - INFO - Database initialized successfully
+2025-03-27 09:01:30,546 - WARNING -  * Debugger is active!
+2025-03-27 09:01:30,573 - INFO -  * Debugger PIN: 828-378-164
+2025-03-27 09:01:31,053 - INFO - 127.0.0.1 - - [27/Mar/2025 09:01:31] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-27 09:01:31,076 - INFO - 127.0.0.1 - - [27/Mar/2025 09:01:31] "GET /login HTTP/1.1" 200 -
+2025-03-27 09:10:52,126 - INFO -  * Detected change in 'C:\\Users\\Murali\\OneDrive\\Documents\\banking chatbot\\app.py', reloading
+2025-03-27 09:10:52,134 - INFO -  * Detected change in 'C:\\Users\\Murali\\OneDrive\\Documents\\banking chatbot\\app.py', reloading
+2025-03-27 09:10:57,115 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-27 09:29:33,686 - INFO - Chatbot model initialized successfully
+2025-03-27 09:29:33,706 - INFO - Database initialized successfully
+2025-03-27 09:29:33,819 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-27 09:29:33,820 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-27 09:29:33,856 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-27 09:29:36,384 - INFO - Chatbot model initialized successfully
+2025-03-27 09:29:36,394 - INFO - Database initialized successfully
+2025-03-27 09:29:36,444 - WARNING -  * Debugger is active!
+2025-03-27 09:29:36,457 - INFO -  * Debugger PIN: 828-378-164
+2025-03-27 09:29:50,149 - INFO - 127.0.0.1 - - [27/Mar/2025 09:29:50] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-27 09:29:50,271 - INFO - 127.0.0.1 - - [27/Mar/2025 09:29:50] "GET /register HTTP/1.1" 200 -
+2025-03-27 09:29:50,513 - INFO - 127.0.0.1 - - [27/Mar/2025 09:29:50] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-27 09:30:33,431 - INFO - 127.0.0.1 - - [27/Mar/2025 09:30:33] "GET /register?username=manju&email=vijayamanjusree6699@gmail.com&password=Manju_sree_04&confirm-password=Manju_sree_04 HTTP/1.1" 200 -
+2025-03-27 09:32:35,042 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\sqlalchemy\\__init__.py', reloading
+2025-03-27 09:32:35,085 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\sqlalchemy\\schema.py', reloading
+2025-03-27 09:32:35,092 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\sqlalchemy\\sql\\schema.py', reloading
+2025-03-27 09:32:36,097 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-27 09:32:40,050 - INFO - Chatbot model initialized successfully
+2025-03-27 09:32:40,062 - INFO - Database initialized successfully
+2025-03-27 09:32:40,123 - WARNING -  * Debugger is active!
+2025-03-27 09:32:40,131 - INFO -  * Debugger PIN: 828-378-164
+2025-03-27 09:33:02,408 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\sqlalchemy\\sql\\base.py', reloading
+2025-03-27 09:33:02,517 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\sqlalchemy\\event\\__init__.py', reloading
+2025-03-27 09:33:02,521 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\sqlalchemy\\event\\registry.py', reloading
+2025-03-27 09:33:02,540 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\sqlalchemy\\sql\\__init__.py', reloading
+2025-03-27 09:33:02,551 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\sqlalchemy\\sql\\visitors.py', reloading
+2025-03-27 09:33:02,598 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\sqlalchemy\\inspection.py', reloading
+2025-03-27 09:33:02,733 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\sqlalchemy\\sql\\selectable.py', reloading
+2025-03-27 09:33:02,882 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\sqlalchemy\\sql\\annotation.py', reloading
+2025-03-27 09:33:02,910 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\sqlalchemy\\util\\__init__.py', reloading
+2025-03-27 09:33:02,922 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\sqlalchemy\\util\\langhelpers.py', reloading
+2025-03-27 09:33:03,588 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-27 09:33:07,628 - INFO - Chatbot model initialized successfully
+2025-03-27 09:33:07,640 - INFO - Database initialized successfully
+2025-03-27 09:33:07,702 - WARNING -  * Debugger is active!
+2025-03-27 09:33:07,709 - INFO -  * Debugger PIN: 828-378-164
+2025-03-27 09:33:28,135 - INFO - Chatbot model initialized successfully
+2025-03-27 09:33:28,143 - INFO - Database initialized successfully
+2025-03-27 09:33:28,258 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-27 09:33:28,258 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-27 09:33:28,279 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-27 09:33:30,812 - INFO - Chatbot model initialized successfully
+2025-03-27 09:33:30,820 - INFO - Database initialized successfully
+2025-03-27 09:33:30,867 - WARNING -  * Debugger is active!
+2025-03-27 09:33:30,874 - INFO -  * Debugger PIN: 828-378-164
+2025-03-27 09:33:50,148 - INFO - 127.0.0.1 - - [27/Mar/2025 09:33:50] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-27 09:33:50,258 - INFO - 127.0.0.1 - - [27/Mar/2025 09:33:50] "GET /register HTTP/1.1" 200 -
+2025-03-27 09:34:24,443 - INFO - 127.0.0.1 - - [27/Mar/2025 09:34:24] "GET /register?username=manju&email=vijayamanjusree6699@gmail.com&password=Vijayamanju_04&confirm-password=Vijayamanju_04 HTTP/1.1" 200 -
+2025-03-27 09:38:57,174 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\sqlalchemy\\sql\\roles.py', reloading
+2025-03-27 09:38:57,711 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-27 09:39:04,550 - INFO - Chatbot model initialized successfully
+2025-03-27 09:39:04,568 - INFO - Database initialized successfully
+2025-03-27 09:39:04,696 - WARNING -  * Debugger is active!
+2025-03-27 09:39:04,715 - INFO -  * Debugger PIN: 828-378-164
+2025-03-27 09:41:44,015 - INFO - Chatbot model initialized successfully
+2025-03-27 09:41:44,030 - INFO - Database initialized successfully
+2025-03-27 09:41:44,154 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-27 09:41:44,156 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-27 09:41:44,188 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-27 09:41:48,782 - INFO - Chatbot model initialized successfully
+2025-03-27 09:41:48,793 - INFO - Database initialized successfully
+2025-03-27 09:41:48,884 - WARNING -  * Debugger is active!
+2025-03-27 09:41:48,893 - INFO -  * Debugger PIN: 828-378-164
+2025-03-27 09:42:03,449 - INFO - 127.0.0.1 - - [27/Mar/2025 09:42:03] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-27 09:42:03,657 - INFO - 127.0.0.1 - - [27/Mar/2025 09:42:03] "GET /register HTTP/1.1" 200 -
+2025-03-27 09:42:03,662 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.752.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading
+2025-03-27 09:42:05,043 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-27 09:42:11,465 - INFO - Chatbot model initialized successfully
+2025-03-27 09:42:11,474 - INFO - Database initialized successfully
+2025-03-27 09:42:11,607 - WARNING -  * Debugger is active!
+2025-03-27 09:42:11,626 - INFO -  * Debugger PIN: 828-378-164
+2025-03-27 09:42:25,134 - INFO - 127.0.0.1 - - [27/Mar/2025 09:42:25] "GET /register?username=manju&email=vijayamanjusree6699@gmail.com&password=Manjusree_04&confirm-password=Manjusree_04 HTTP/1.1" 200 -
+2025-03-27 11:52:18,271 - INFO -  * Detected change in 'C:\\Users\\Murali\\OneDrive\\Documents\\banking chatbot\\dataset_creation.py', reloading
+2025-03-27 11:52:18,278 - INFO -  * Detected change in 'C:\\Users\\Murali\\OneDrive\\Documents\\banking chatbot\\preprocessing.py', reloading
+2025-03-27 11:52:18,286 - INFO -  * Detected change in 'C:\\Users\\Murali\\OneDrive\\Documents\\banking chatbot\\model_training.py', reloading
+2025-03-27 11:52:18,304 - INFO -  * Detected change in 'C:\\Users\\Murali\\OneDrive\\Documents\\banking chatbot\\app.py', reloading
+2025-03-27 11:52:18,884 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-27 11:52:22,089 - INFO - Chatbot model initialized successfully
+2025-03-27 11:52:22,097 - INFO - Database initialized successfully
+2025-03-27 11:52:22,154 - WARNING -  * Debugger is active!
+2025-03-27 11:52:22,160 - INFO -  * Debugger PIN: 828-378-164
+2025-03-27 11:53:32,392 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\sqlalchemy\\orm\\mapper.py', reloading
+2025-03-27 11:53:32,514 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\sqlalchemy\\orm\\interfaces.py', reloading
+2025-03-27 11:53:32,543 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\sqlalchemy\\orm\\_typing.py', reloading
+2025-03-27 11:53:32,555 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\sqlalchemy\\sql\\cache_key.py', reloading
+2025-03-27 11:53:32,575 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\sqlalchemy\\orm\\base.py', reloading
+2025-03-27 11:53:32,617 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\sqlalchemy\\orm\\state.py', reloading
+2025-03-27 11:53:32,669 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\sqlalchemy\\orm\\relationships.py', reloading
+2025-03-27 11:53:33,395 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-27 11:53:35,846 - INFO - Chatbot model initialized successfully
+2025-03-27 11:53:35,860 - INFO - Database initialized successfully
+2025-03-27 11:53:35,921 - WARNING -  * Debugger is active!
+2025-03-27 11:53:35,930 - INFO -  * Debugger PIN: 828-378-164
+2025-03-27 11:58:27,268 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\sqlalchemy\\orm\\scoping.py', reloading
+2025-03-27 11:58:27,983 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-27 11:58:31,712 - INFO - Chatbot model initialized successfully
+2025-03-27 11:58:31,726 - INFO - Database initialized successfully
+2025-03-27 11:58:31,786 - WARNING -  * Debugger is active!
+2025-03-27 11:58:31,796 - INFO -  * Debugger PIN: 828-378-164
+2025-03-27 11:58:31,927 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\flask\\__init__.py', reloading
+2025-03-27 11:58:31,973 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\flask\\app.py', reloading
+2025-03-27 11:58:32,122 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\flask\\sansio\\app.py', reloading
+2025-03-27 11:58:32,213 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\flask\\sansio\\scaffold.py', reloading
+2025-03-27 11:58:32,264 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\flask\\templating.py', reloading
+2025-03-27 11:58:32,299 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\flask\\globals.py', reloading
+2025-03-27 11:58:32,309 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\flask\\wrappers.py', reloading
+2025-03-27 11:58:32,329 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2025-03-27 11:58:32,339 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+2025-03-27 11:58:32,392 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\werkzeug\\sansio\\request.py', reloading
+2025-03-27 11:58:32,429 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\flask\\json\\__init__.py', reloading
+2025-03-27 11:58:32,439 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2025-03-27 11:58:32,512 - INFO -  * Detected change in 'C:\\Users\\Murali\\OneDrive\\Documents\\banking chatbot\\app.py', reloading
+2025-03-27 11:58:32,547 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\werkzeug\\sansio\\response.py', reloading
+2025-03-27 11:58:32,626 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\flask\\sessions.py', reloading
+2025-03-27 11:58:32,656 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\flask\\helpers.py', reloading
+2025-03-27 11:58:32,704 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\flask_sqlalchemy\\__init__.py', reloading
+2025-03-27 11:58:32,710 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\flask_sqlalchemy\\extension.py', reloading
+2025-03-27 11:58:32,778 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\werkzeug\\security.py', reloading
+2025-03-27 11:58:32,787 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\werkzeug\\utils.py', reloading
+2025-03-27 11:58:32,856 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\deep_translator\\__init__.py', reloading
+2025-03-27 11:58:32,862 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\deep_translator\\google.py', reloading
+2025-03-27 11:58:32,872 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\deep_translator\\base.py', reloading
+2025-03-27 11:58:32,902 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\user_agents\\__init__.py', reloading
+2025-03-27 11:58:32,916 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\user_agents\\parsers.py', reloading
+2025-03-27 11:58:33,404 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-27 12:10:20,719 - INFO - Chatbot model initialized successfully
+2025-03-27 12:10:20,737 - INFO - Database initialized successfully
+2025-03-27 12:10:20,837 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-27 12:10:20,838 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-27 12:10:20,869 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-27 12:10:22,821 - INFO - Chatbot model initialized successfully
+2025-03-27 12:10:22,827 - INFO - Database initialized successfully
+2025-03-27 12:10:22,863 - WARNING -  * Debugger is active!
+2025-03-27 12:10:22,877 - INFO -  * Debugger PIN: 828-378-164
+2025-03-27 12:10:27,222 - INFO - 127.0.0.1 - - [27/Mar/2025 12:10:27] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-27 12:10:27,357 - INFO - 127.0.0.1 - - [27/Mar/2025 12:10:27] "GET /register HTTP/1.1" 200 -
+2025-03-27 12:10:27,363 - INFO -  * Detected change in 'C:\\Program Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_3.13.752.0_x64__qbz5n2kfra8p0\\Lib\\encodings\\unicode_escape.py', reloading
+2025-03-27 12:10:27,529 - INFO - 127.0.0.1 - - [27/Mar/2025 12:10:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-27 12:10:28,453 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-27 12:10:31,219 - INFO - Chatbot model initialized successfully
+2025-03-27 12:10:31,229 - INFO - Database initialized successfully
+2025-03-27 12:10:31,267 - WARNING -  * Debugger is active!
+2025-03-27 12:10:31,273 - INFO -  * Debugger PIN: 828-378-164
+2025-03-27 12:10:46,515 - INFO - 127.0.0.1 - - [27/Mar/2025 12:10:46] "[32mPOST /register HTTP/1.1[0m" 302 -
+2025-03-27 12:10:46,541 - INFO - 127.0.0.1 - - [27/Mar/2025 12:10:46] "GET /login HTTP/1.1" 200 -
+2025-03-27 12:10:59,786 - INFO - 127.0.0.1 - - [27/Mar/2025 12:10:59] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-03-27 12:10:59,806 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\jinja2\\environment.py', reloading
+2025-03-27 12:10:59,813 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\jinja2\\loaders.py', reloading
+2025-03-27 12:10:59,847 - INFO - 127.0.0.1 - - [27/Mar/2025 12:10:59] "[35m[1mGET /chat_interface HTTP/1.1[0m" 500 -
+2025-03-27 12:11:00,090 - INFO - 127.0.0.1 - - [27/Mar/2025 12:11:00] "GET /chat_interface?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-03-27 12:11:00,100 - INFO - 127.0.0.1 - - [27/Mar/2025 12:11:00] "GET /chat_interface?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-03-27 12:11:00,202 - INFO - 127.0.0.1 - - [27/Mar/2025 12:11:00] "GET /chat_interface?__debugger__=yes&cmd=resource&f=console.png&s=cqNsSxbtMSnsRo7kHz5W HTTP/1.1" 200 -
+2025-03-27 12:11:00,243 - INFO - 127.0.0.1 - - [27/Mar/2025 12:11:00] "GET /chat_interface?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-03-27 12:11:00,538 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-27 12:11:02,336 - INFO - Chatbot model initialized successfully
+2025-03-27 12:11:02,341 - INFO - Database initialized successfully
+2025-03-27 12:11:02,383 - WARNING -  * Debugger is active!
+2025-03-27 12:11:02,386 - INFO -  * Debugger PIN: 828-378-164
+2025-03-27 12:13:21,783 - INFO - Chatbot model initialized successfully
+2025-03-27 12:13:21,791 - INFO - Database initialized successfully
+2025-03-27 12:13:21,896 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-27 12:13:21,919 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-27 12:13:21,933 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-27 12:13:23,795 - INFO - Chatbot model initialized successfully
+2025-03-27 12:13:23,803 - INFO - Database initialized successfully
+2025-03-27 12:13:23,831 - WARNING -  * Debugger is active!
+2025-03-27 12:13:23,837 - INFO -  * Debugger PIN: 828-378-164
+2025-03-27 12:13:26,737 - INFO - 127.0.0.1 - - [27/Mar/2025 12:13:26] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-27 12:13:26,877 - INFO - 127.0.0.1 - - [27/Mar/2025 12:13:26] "GET /register HTTP/1.1" 200 -
+2025-03-27 12:13:27,010 - INFO - 127.0.0.1 - - [27/Mar/2025 12:13:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-27 12:13:29,983 - INFO - 127.0.0.1 - - [27/Mar/2025 12:13:29] "GET /login HTTP/1.1" 200 -
+2025-03-27 12:13:37,808 - INFO - 127.0.0.1 - - [27/Mar/2025 12:13:37] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-03-27 12:13:37,836 - INFO - 127.0.0.1 - - [27/Mar/2025 12:13:37] "GET /chat_interface HTTP/1.1" 200 -
+2025-03-27 12:16:24,868 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\jinja2\\__init__.py', reloading
+2025-03-27 12:16:25,395 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-27 12:16:26,993 - INFO - Chatbot model initialized successfully
+2025-03-27 12:16:26,997 - INFO - Database initialized successfully
+2025-03-27 12:16:27,026 - WARNING -  * Debugger is active!
+2025-03-27 12:16:27,031 - INFO -  * Debugger PIN: 828-378-164
+2025-03-27 12:20:43,356 - INFO - Chatbot model initialized successfully
+2025-03-27 12:20:43,361 - INFO - Database initialized successfully
+2025-03-27 12:20:43,409 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-27 12:20:43,409 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-27 12:20:43,418 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-27 12:20:45,170 - INFO - Chatbot model initialized successfully
+2025-03-27 12:20:45,177 - INFO - Database initialized successfully
+2025-03-27 12:20:45,215 - WARNING -  * Debugger is active!
+2025-03-27 12:20:45,220 - INFO -  * Debugger PIN: 828-378-164
+2025-03-27 12:20:48,419 - INFO - 127.0.0.1 - - [27/Mar/2025 12:20:48] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-27 12:20:48,530 - INFO - 127.0.0.1 - - [27/Mar/2025 12:20:48] "GET /register HTTP/1.1" 200 -
+2025-03-27 12:20:48,691 - INFO - 127.0.0.1 - - [27/Mar/2025 12:20:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-27 12:21:00,787 - INFO - 127.0.0.1 - - [27/Mar/2025 12:21:00] "GET /login HTTP/1.1" 200 -
+2025-03-27 12:21:11,045 - INFO - 127.0.0.1 - - [27/Mar/2025 12:21:11] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-03-27 12:21:11,076 - INFO - 127.0.0.1 - - [27/Mar/2025 12:21:11] "GET /chat_interface HTTP/1.1" 200 -
+2025-03-27 12:27:41,472 - INFO - Chatbot model initialized successfully
+2025-03-27 12:37:07,432 - INFO - Chatbot model initialized successfully
+2025-03-27 12:37:07,455 - INFO - Database initialized successfully
+2025-03-27 12:37:07,564 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-27 12:37:07,564 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-27 12:37:07,583 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-27 12:37:09,701 - INFO - Chatbot model initialized successfully
+2025-03-27 12:37:09,707 - INFO - Database initialized successfully
+2025-03-27 12:37:09,744 - WARNING -  * Debugger is active!
+2025-03-27 12:37:09,752 - INFO -  * Debugger PIN: 828-378-164
+2025-03-27 12:37:12,732 - INFO - 127.0.0.1 - - [27/Mar/2025 12:37:12] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-27 12:37:12,877 - INFO - 127.0.0.1 - - [27/Mar/2025 12:37:12] "GET /register HTTP/1.1" 200 -
+2025-03-27 12:37:12,995 - INFO - 127.0.0.1 - - [27/Mar/2025 12:37:12] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-27 12:37:15,101 - INFO - 127.0.0.1 - - [27/Mar/2025 12:37:15] "GET /login HTTP/1.1" 200 -
+2025-03-27 12:37:29,057 - INFO - 127.0.0.1 - - [27/Mar/2025 12:37:29] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-03-27 12:37:29,083 - INFO - 127.0.0.1 - - [27/Mar/2025 12:37:29] "GET /chat_interface HTTP/1.1" 200 -
+2025-03-27 12:37:34,477 - INFO - 127.0.0.1 - - [27/Mar/2025 12:37:34] "[33mGET /profile HTTP/1.1[0m" 404 -
+2025-03-27 12:45:37,465 - INFO - Chatbot model initialized successfully
+2025-03-27 12:45:37,483 - INFO - Database initialized successfully
+2025-03-27 12:45:37,568 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-27 12:45:37,569 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-27 12:45:37,592 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-27 12:45:39,621 - INFO - Chatbot model initialized successfully
+2025-03-27 12:45:39,627 - INFO - Database initialized successfully
+2025-03-27 12:45:39,652 - WARNING -  * Debugger is active!
+2025-03-27 12:45:39,657 - INFO -  * Debugger PIN: 828-378-164
+2025-03-27 12:45:42,704 - INFO - 127.0.0.1 - - [27/Mar/2025 12:45:42] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-27 12:45:42,805 - INFO - 127.0.0.1 - - [27/Mar/2025 12:45:42] "GET /chat_interface HTTP/1.1" 200 -
+2025-03-27 12:45:53,701 - INFO - 127.0.0.1 - - [27/Mar/2025 12:45:53] "[32mGET / HTTP/1.1[0m" 302 -
+2025-03-27 12:45:53,822 - INFO - 127.0.0.1 - - [27/Mar/2025 12:45:53] "GET /register HTTP/1.1" 200 -
+2025-03-27 12:45:53,972 - INFO - 127.0.0.1 - - [27/Mar/2025 12:45:53] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-27 12:45:56,216 - INFO - 127.0.0.1 - - [27/Mar/2025 12:45:56] "GET /login HTTP/1.1" 200 -
+2025-03-27 12:46:06,023 - INFO - Login attempt for user: manju
+2025-03-27 12:46:06,311 - INFO - Successful login for user: manju
+2025-03-27 12:46:06,314 - INFO - 127.0.0.1 - - [27/Mar/2025 12:46:06] "[32mPOST /login HTTP/1.1[0m" 302 -
+2025-03-27 12:46:06,325 - INFO - 127.0.0.1 - - [27/Mar/2025 12:46:06] "GET /chat_interface HTTP/1.1" 200 -
+2025-03-27 12:54:49,749 - INFO - Chatbot model initialized successfully
+2025-03-27 12:54:49,770 - INFO - Database initialized successfully
+2025-03-27 12:54:49,889 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2025-03-27 12:54:49,889 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-27 12:54:49,915 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-27 12:54:53,058 - INFO - Chatbot model initialized successfully
+2025-03-27 12:54:53,067 - INFO - Database initialized successfully
+2025-03-27 12:54:53,160 - WARNING -  * Debugger is active!
+2025-03-27 12:54:53,214 - INFO -  * Debugger PIN: 828-378-164
+2025-03-27 14:16:45,612 - INFO -  * Detected change in 'C:\\Users\\Murali\\OneDrive\\Documents\\banking chatbot\\dataset_creation.py', reloading
+2025-03-27 14:16:45,624 - INFO -  * Detected change in 'C:\\Users\\Murali\\OneDrive\\Documents\\banking chatbot\\preprocessing.py', reloading
+2025-03-27 14:16:45,641 - INFO -  * Detected change in 'C:\\Users\\Murali\\OneDrive\\Documents\\banking chatbot\\model_training.py', reloading
+2025-03-27 14:16:45,656 - INFO -  * Detected change in 'C:\\Users\\Murali\\OneDrive\\Documents\\banking chatbot\\app.py', reloading
+2025-03-27 14:16:46,696 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-27 20:04:29,207 - INFO - Chatbot model initialized successfully
+2025-03-27 20:04:29,232 - INFO - Database initialized successfully
+2025-03-27 20:04:29,318 - WARNING -  * Debugger is active!
+2025-03-27 20:04:29,329 - INFO -  * Debugger PIN: 828-378-164
+2025-03-27 20:04:34,359 - INFO -  * Detected change in 'C:\\Users\\Murali\\OneDrive\\Documents\\banking chatbot\\dataset_creation.py', reloading
+2025-03-27 20:04:34,368 - INFO -  * Detected change in 'C:\\Users\\Murali\\OneDrive\\Documents\\banking chatbot\\preprocessing.py', reloading
+2025-03-27 20:04:34,385 - INFO -  * Detected change in 'C:\\Users\\Murali\\OneDrive\\Documents\\banking chatbot\\model_training.py', reloading
+2025-03-27 20:04:34,441 - INFO -  * Detected change in 'C:\\Users\\Murali\\OneDrive\\Documents\\banking chatbot\\app.py', reloading
+2025-03-27 20:04:35,456 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-27 20:04:40,148 - INFO - Chatbot model initialized successfully
+2025-03-27 20:04:40,165 - INFO - Database initialized successfully
+2025-03-27 20:04:40,225 - WARNING -  * Debugger is active!
+2025-03-27 20:04:40,233 - INFO -  * Debugger PIN: 828-378-164
+2025-03-27 20:09:36,911 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\flask\\__init__.py', reloading
+2025-03-27 20:09:36,924 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\flask\\app.py', reloading
+2025-03-27 20:09:36,997 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\flask\\sansio\\app.py', reloading
+2025-03-27 20:09:37,030 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\flask\\sansio\\scaffold.py', reloading
+2025-03-27 20:09:37,069 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\flask\\templating.py', reloading
+2025-03-27 20:09:37,081 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\jinja2\\__init__.py', reloading
+2025-03-27 20:09:37,088 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\jinja2\\environment.py', reloading
+2025-03-27 20:09:37,179 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\flask\\globals.py', reloading
+2025-03-27 20:09:37,185 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\flask\\wrappers.py', reloading
+2025-03-27 20:09:37,193 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2025-03-27 20:09:37,197 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\werkzeug\\wrappers\\request.py', reloading
+2025-03-27 20:09:37,231 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\werkzeug\\sansio\\request.py', reloading
+2025-03-27 20:09:37,251 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\flask\\json\\__init__.py', reloading
+2025-03-27 20:09:37,257 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2025-03-27 20:09:37,286 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\werkzeug\\sansio\\response.py', reloading
+2025-03-27 20:09:37,337 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\flask\\sessions.py', reloading
+2025-03-27 20:09:37,363 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\flask\\helpers.py', reloading
+2025-03-27 20:09:37,851 - INFO -  * Restarting with watchdog (windowsapi)
+2025-03-27 20:09:42,250 - INFO - Chatbot model initialized successfully
+2025-03-27 20:09:42,264 - INFO - Database initialized successfully
+2025-03-27 20:09:42,328 - WARNING -  * Debugger is active!
+2025-03-27 20:09:42,338 - INFO -  * Debugger PIN: 828-378-164
+2025-03-27 20:09:42,818 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\torch\\functional.py', reloading
+2025-03-27 20:09:42,877 - INFO -  * Detected change in 'C:\\Users\\Murali\\AppData\\Local\\Packages\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\LocalCache\\local-packages\\Python313\\site-packages\\transformers\\__init__.py', reloading
+2025-03-27 20:09:43,773 - INFO -  * Restarting with watchdog (windowsapi)

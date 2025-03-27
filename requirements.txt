@@ -1,0 +1,13 @@
+flask==2.0.1
+flask-sqlalchemy==2.5.1
+werkzeug==2.0.1
+torch
+transformers
+speechrecognition
+deep-translator
+user-agents
+pandas
+numpy
+scikit-learn
+tqdm
+python-dotenv
