@@ -138,3 +138,10 @@
 2025-05-03 19:36:01,064 - INFO - 127.0.0.1 - - [03/May/2025 19:36:01] "POST /chat HTTP/1.1" 200 -
 2025-05-03 19:36:22,277 - INFO - Predicted intent: account_balance with confidence: 0.9
 2025-05-03 19:36:22,295 - INFO - 127.0.0.1 - - [03/May/2025 19:36:22] "POST /chat HTTP/1.1" 200 -
+2025-05-03 19:36:58,887 - INFO -  * Detected change in 'C:\\Users\\manoj\\OneDrive\\Documents\\banking chatbot\\banking-chatbot\\model_training.py', reloading
+2025-05-03 19:36:58,981 - INFO -  * Restarting with stat
+2025-05-03 19:36:59,435 - INFO - Intents loaded successfully
+2025-05-03 19:36:59,436 - INFO - Enhanced banking chatbot initialized successfully
+2025-05-03 19:36:59,460 - WARNING -  * Debugger is active!
+2025-05-03 19:36:59,469 - INFO -  * Debugger PIN: 504-546-672
+2025-05-03 19:37:00,760 - INFO -  * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
