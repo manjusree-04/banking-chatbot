@@ -1,0 +1,65 @@
+{
+    "intents": [
+        {
+            "tag": "greeting",
+            "patterns": [
+                "Hi",
+                "Hey",
+                "Hello",
+                "Good morning",
+                "Good afternoon",
+                "Good evening"
+            ],
+            "responses": [
+                "Hello! How can I assist you with your banking needs today?",
+                "Hi there! How may I help you?",
+                "Hello! What banking services are you looking for?"
+            ]
+        },
+        {
+            "tag": "balance_inquiry",
+            "patterns": [
+                "What's my account balance",
+                "How much money do I have",
+                "Check balance",
+                "Show my balance",
+                "Account balance"
+            ],
+            "responses": [
+                "Your current balance is [AMOUNT]. Would you like to see your recent transactions?",
+                "The balance in your account is [AMOUNT]. Is there anything else you'd like to know?",
+                "You have [AMOUNT] in your account. Can I help you with anything else?"
+            ]
+        },
+        {
+            "tag": "transfer_money",
+            "patterns": [
+                "I want to transfer money",
+                "How do I send money",
+                "Transfer funds",
+                "Send money to another account",
+                "Make a payment"
+            ],
+            "responses": [
+                "I can help you transfer money. Please provide the recipient's account number and the amount.",
+                "To transfer money, I'll need the following details: recipient's account number and transfer amount.",
+                "Sure, I can assist with the transfer. What's the recipient's account number and how much would you like to send?"
+            ]
+        },
+        {
+            "tag": "transaction_history",
+            "patterns": [
+                "Show my transactions",
+                "Recent transactions",
+                "Transaction history",
+                "Past transactions",
+                "Show my spending"
+            ],
+            "responses": [
+                "Here are your recent transactions: [TRANSACTIONS]",
+                "I'll display your transaction history: [TRANSACTIONS]",
+                "These are your latest transactions: [TRANSACTIONS]"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "greeting": [
+        "Hello! How can I assist you with your banking needs today?",
+        "Hi there! How may I help you?",
+        "Hello! What banking services are you looking for?"
+    ],
+    "balance_inquiry": [
+        "Your current balance is [AMOUNT]. Would you like to see your recent transactions?",
+        "The balance in your account is [AMOUNT]. Is there anything else you'd like to know?",
+        "You have [AMOUNT] in your account. Can I help you with anything else?"
+    ],
+    "transfer_money": [
+        "I can help you transfer money. Please provide the recipient's account number and the amount.",
+        "To transfer money, I'll need the following details: recipient's account number and transfer amount.",
+        "Sure, I can assist with the transfer. What's the recipient's account number and how much would you like to send?"
+    ],
+    "transaction_history": [
+        "Here are your recent transactions: [TRANSACTIONS]",
+        "I'll display your transaction history: [TRANSACTIONS]",
+        "These are your latest transactions: [TRANSACTIONS]"
+    ],
+    "fallback": [
+        "I'm not sure how to respond to that. Could you please rephrase?",
+        "I didn't quite understand. Can you try asking in a different way?",
+        "I'm still learning. Could you provide more details about your request?"
+    ]
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - Banking Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="profile-container">
+            <h1>User Profile</h1>
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            
+            <form method="POST" action="{{ url_for('profile') }}" enctype="multipart/form-data">
+                <div class="profile-picture">
+                    {% if user.profile.profile_picture %}
+                        <img src="{{ url_for('uploaded_file', filename=user.profile.profile_picture) }}" alt="Profile Picture">
+                    {% else %}
+                        <div class="no-picture">No profile picture</div>
+                    {% endif %}
+                    <div class="form-group">
+                        <label for="profile_picture">Update Profile Picture:</label>
+                        <input type="file" id="profile_picture" name="profile_picture" accept="image/*">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="first_name">First Name:</label>
+                    <input type="text" id="first_name" name="first_name" value="{{ user.profile.first_name or '' }}">
+                </div>
+                
+                <div class="form-group">
+                    <label for="last_name">Last Name:</label>
+                    <input type="text" id="last_name" name="last_name" value="{{ user.profile.last_name or '' }}">
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone_number">Phone Number:</label>
+                    <input type="tel" id="phone_number" name="phone_number" value="{{ user.profile.phone_number or '' }}">
+                </div>
+                
+                <div class="form-group">
+                    <label for="address">Address:</label>
+                    <textarea id="address" name="address">{{ user.profile.address or '' }}</textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="date_of_birth">Date of Birth:</label>
+                    <input type="date" id="date_of_birth" name="date_of_birth" value="{{ user.profile.date_of_birth or '' }}">
+                </div>
+                
+                <div class="button-group">
+                    <button type="submit" class="btn btn-primary">Update Profile</button>
+                    <a href="{{ url_for('chat_interface') }}" class="btn btn-secondary">Back to Chat</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

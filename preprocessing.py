@@ -1,23 +1,21 @@
-# preprocessing.py
 import pandas as pd
 import numpy as np
-from nltk.tokenize import word_tokenize
-from nltk.stem import WordNetLemmatizer
-from nltk.corpus import stopwords
-from nltk.tokenize import sent_tokenize
-import nltk
 import re
+import string
+import nltk
+from nltk.corpus import stopwords
+from nltk.stem import WordNetLemmatizer
+from nltk.tokenize import word_tokenize
 from tqdm import tqdm
 import multiprocessing
-from concurrent.futures import ProcessPoolExecutor
-import logging
 import os
+import logging
+from concurrent.futures import ProcessPoolExecutor
 
-# Download required NLTK data
-try:
-    nltk.download(['punkt', 'stopwords', 'wordnet', 'averaged_perceptron_tagger'])
-except:
-    print("NLTK data already downloaded or error in downloading")
+# Download NLTK resources
+nltk.download('punkt', quiet=True)
+nltk.download('stopwords', quiet=True)
+nltk.download('wordnet', quiet=True)
 
 # Configure logging
 logging.basicConfig(
@@ -29,284 +27,246 @@ logging.basicConfig(
     ]
 )
 
-# Contractions dictionary
-CONTRACTION_MAP = {
-    "ain't": "is not",
-    "aren't": "are not",
-    "can't": "cannot",
-    "couldn't": "could not",
-    "didn't": "did not",
-    "doesn't": "does not",
-    "don't": "do not",
-    "hadn't": "had not",
-    "hasn't": "has not",
-    "haven't": "have not",
-    "he'd": "he would",
-    "he'll": "he will",
-    "he's": "he is",
-    "i'd": "i would",
-    "i'll": "i will",
-    "i'm": "i am",
-    "i've": "i have",
-    "isn't": "is not",
-    "it's": "it is",
-    "let's": "let us",
-    "mightn't": "might not",
-    "mustn't": "must not",
-    "shan't": "shall not",
-    "she'd": "she would",
-    "she'll": "she will",
-    "she's": "she is",
-    "shouldn't": "should not",
-    "that's": "that is",
-    "there's": "there is",
-    "they'd": "they would",
-    "they'll": "they will",
-    "they're": "they are",
-    "they've": "they have",
-    "we'd": "we would",
-    "we're": "we are",
-    "we've": "we have",
-    "weren't": "were not",
-    "what'll": "what will",
-    "what're": "what are",
-    "what's": "what is",
-    "what've": "what have",
-    "where's": "where is",
-    "who'd": "who would",
-    "who'll": "who will",
-    "who're": "who are",
-    "who's": "who is",
-    "who've": "who have",
-    "won't": "will not",
-    "wouldn't": "would not",
-    "you'd": "you would",
-    "you'll": "you will",
-    "you're": "you are",
-    "you've": "you have"
-}
-
-class TextPreprocessor:
+class BankingTextPreprocessor:
     def __init__(self):
         self.lemmatizer = WordNetLemmatizer()
         self.stop_words = set(stopwords.words('english'))
         
-        # Add banking-specific stop words
+        # Banking-specific stop words to remove
         self.stop_words.update([
-            'bank', 'banking', 'please', 'need', 'help', 'hello', 'hi', 'hey',
-            'thanks', 'thank', 'you', 'dear', 'sir', 'madam', 'would', 'could'
+            'please', 'could', 'would', 'also', 'may', 'might', 'shall', 
+            'should', 'hello', 'hi', 'hey', 'thanks', 'thank', 'dear'
         ])
         
-        # Banking specific terms to preserve
+        # Banking terms to preserve (won't be lemmatized or removed)
         self.banking_terms = {
-            'atm', 'pin', 'credit', 'debit', 'card', 'loan', 'emi', 'kyc',
-            'upi', 'neft', 'rtgs', 'imps', 'fd', 'rd', 'savings', 'current',
-            'balance', 'transfer', 'deposit', 'withdraw', 'statement', 'account',
-            'interest', 'bank', 'branch', 'cheque', 'check', 'draft', 'payment',
-            'transaction', 'online', 'mobile', 'password', 'username', 'login',
-            'logout', 'profile', 'beneficiary', 'payee', 'mandate', 'salary',
-            'pension', 'insurance', 'investment', 'mutual', 'fund', 'stock',
-            'share', 'bond', 'dividend', 'tax', 'gst', 'pan', 'aadhar', 'kyc'
+            # Account types
+            'savings', 'current', 'salary', 'fixed', 'deposit', 'fd', 'rd', 'recurring',
+            # Transactions
+            'transfer', 'neft', 'rtgs', 'imps', 'upi', 'transaction', 'balance',
+            # Cards
+            'debit', 'credit', 'card', 'pin', 'cvv', 'expiry', 'limit',
+            # Loans
+            'loan', 'emi', 'interest', 'principal', 'tenure', 'maturity',
+            # Banking operations
+            'cheque', 'draft', 'withdrawal', 'deposit', 'overdraft', 'standing', 'instruction',
+            # Security
+            'otp', 'password', 'authentication', 'verification', 'kyc', 'pan', 'aadhaar',
+            # Digital banking
+            'netbanking', 'mobilebanking', 'app', 'login', 'logout', 'username'
         }
-
-    def expand_contractions(self, text):
-        """Expand contractions in text"""
-        for contraction, expansion in CONTRACTION_MAP.items():
-            text = text.replace(contraction, expansion)
-        return text
+        
+        # Currency and numbers pattern
+        self.currency_pattern = re.compile(r'(\$|€|£|₹|¥|₩|₽|₿|rs|inr|usd)\s?\d+([.,]\d+)*')
+        self.number_pattern = re.compile(r'\d+([.,]\d+)*')
+        
+        # Special characters to preserve
+        self.special_chars = {'@', '#', '%', '&', '*', '-', '_', '/'}
+        
+        # Contractions mapping
+        self.contractions = {
+            "won't": "will not", "can't": "cannot", "n't": " not", "'re": " are",
+            "'s": " is", "'d": " would", "'ll": " will", "'t": " not", "'ve": " have",
+            "'m": " am"
+        }
 
     def clean_text(self, text):
-        """Clean and normalize text"""
-        try:
-            # Convert to string if not already
-            text = str(text)
+        """Basic text cleaning while preserving banking-specific patterns"""
+        if not isinstance(text, str):
+            return ""
             
-            # Convert to lowercase
-            text = text.lower()
-            
-            # Expand contractions
-            text = self.expand_contractions(text)
-            
-            # Handle special cases for banking terms
-            words = text.split()
-            cleaned_words = []
-            for word in words:
-                # Preserve banking terms
-                if word.lower() in self.banking_terms:
-                    cleaned_words.append(word)
-                else:
-                    # Remove special characters and numbers, except for specific patterns
-                    cleaned_word = re.sub(r'[^a-zA-Z\s]', '', word)
-                    if cleaned_word:
-                        cleaned_words.append(cleaned_word)
-            
-            text = ' '.join(cleaned_words)
-            
-            # Remove extra whitespace
-            text = ' '.join(text.split())
-            
-            return text
-        except Exception as e:
-            logging.error(f"Error in clean_text: {str(e)}")
-            return text
+        # Convert to lowercase
+        text = text.lower()
+        
+        # Preserve currency values
+        text = self.currency_pattern.sub(' CURRENCY ', text)
+        
+        # Preserve account numbers (long numbers)
+        text = self.number_pattern.sub(lambda x: ' NUMBER ' if len(x.group()) > 3 else x.group(), text)
+        
+        # Expand contractions
+        for contraction, expansion in self.contractions.items():
+            text = text.replace(contraction, expansion)
+        
+        # Remove URLs
+        text = re.sub(r'https?://\S+|www\.\S+', ' URL ', text)
+        
+        # Remove email addresses
+        text = re.sub(r'\S+@\S+', ' EMAIL ', text)
+        
+        # Remove non-alphanumeric characters except preserved ones
+        text = ''.join(
+            char if char.isalnum() or char in self.special_chars or char.isspace() 
+            else ' ' 
+            for char in text
+        )
+        
+        # Remove extra whitespace
+        text = ' '.join(text.split())
+        
+        return text
 
     def tokenize(self, text):
-        """Tokenize text into words"""
-        try:
-            return word_tokenize(text)
-        except Exception as e:
-            logging.error(f"Error in tokenize: {str(e)}")
-            return []
+        """Tokenize text while preserving banking terms"""
+        tokens = word_tokenize(text)
+        return tokens
 
-    def remove_stopwords(self, tokens):
-        """Remove stopwords while preserving banking terms"""
-        try:
-            return [token for token in tokens 
-                   if token not in self.stop_words or token in self.banking_terms]
-        except Exception as e:
-            logging.error(f"Error in remove_stopwords: {str(e)}")
-            return tokens
-
-    def lemmatize(self, tokens):
-        """Lemmatize tokens while preserving banking terms"""
-        try:
-            return [self.lemmatizer.lemmatize(token) if token not in self.banking_terms 
-                   else token for token in tokens]
-        except Exception as e:
-            logging.error(f"Error in lemmatize: {str(e)}")
-            return tokens
-
-    def preprocess(self, text):
-        """Complete preprocessing pipeline"""
-        try:
-            cleaned_text = self.clean_text(text)
-            tokens = self.tokenize(cleaned_text)
-            tokens = self.remove_stopwords(tokens)
-            tokens = self.lemmatize(tokens)
-            return ' '.join(tokens)
-        except Exception as e:
-            logging.error(f"Error in preprocess: {str(e)}")
-            return text
-
-def process_chunk(args):
-    """Process a chunk of data"""
-    chunk, preprocessor, text_column = args
-    return chunk[text_column].apply(preprocessor.preprocess)
-
-class DatasetPreprocessor:
-    def __init__(self):
-        self.preprocessor = TextPreprocessor()
-        self.processed_data_dir = 'processed_datasets'
-        os.makedirs(self.processed_data_dir, exist_ok=True)
-
-    def preprocess_dataset(self, df, text_columns, chunk_size=10000):
-        """Preprocess a dataset using multiprocessing"""
-        try:
-            num_processes = multiprocessing.cpu_count() - 1
+    def process_tokens(self, tokens):
+        """Process tokens with banking-specific rules"""
+        processed_tokens = []
+        for token in tokens:
+            # Preserve banking terms exactly as they are
+            if token in self.banking_terms:
+                processed_tokens.append(token)
+                continue
+                
+            # Remove stop words for non-banking terms
+            if token in self.stop_words:
+                continue
+                
+            # Lemmatize non-banking terms
+            lemma = self.lemmatizer.lemmatize(token)
+            processed_tokens.append(lemma)
             
-            for text_column in text_columns:
-                logging.info(f"Processing column: {text_column}")
-                
-                # Split dataframe into chunks
-                chunks = [df[i:i + chunk_size] for i in range(0, len(df), chunk_size)]
-                
-                processed_chunks = []
-                with ProcessPoolExecutor(max_workers=num_processes) as executor:
-                    args = [(chunk, self.preprocessor, text_column) for chunk in chunks]
-                    
-                    # Process chunks in parallel with progress bar
-                    for processed_chunk in tqdm(
-                        executor.map(process_chunk, args),
-                        total=len(chunks),
-                        desc=f"Processing {text_column}"
-                    ):
-                        processed_chunks.append(processed_chunk)
-                
-                # Combine processed chunks
-                df[f'processed_{text_column}'] = pd.concat(processed_chunks)
-                
-            return df
-        
-        except Exception as e:
-            logging.error(f"Error in preprocess_dataset: {str(e)}")
-            return df
+        return processed_tokens
 
-    def preprocess_all_datasets(self):
-        """Preprocess all datasets"""
+    def preprocess_text(self, text):
+        """Complete text preprocessing pipeline"""
         try:
-            # Process FAQs dataset
-            logging.info("Processing FAQs dataset...")
-            faqs_df = pd.read_csv('datasets/faqs.csv')
-            faqs_df = self.preprocess_dataset(faqs_df, ['question', 'answer'])
-            faqs_df.to_csv(f'{self.processed_data_dir}/processed_faqs.csv', index=False)
-
-            # Process Complaints dataset
-            logging.info("Processing Complaints dataset...")
-            complaints_df = pd.read_csv('datasets/complaints.csv')
-            complaints_df = self.preprocess_dataset(complaints_df, ['description'])
-            complaints_df.to_csv(f'{self.processed_data_dir}/processed_complaints.csv', index=False)
-
-            # Process Assistance dataset
-            logging.info("Processing Assistance dataset...")
-            assistance_df = pd.read_csv('datasets/assistance.csv')
-            assistance_df = self.preprocess_dataset(assistance_df, ['query'])
-            assistance_df.to_csv(f'{self.processed_data_dir}/processed_assistance.csv', index=False)
-
-            # Process Fraud Reports dataset
-            logging.info("Processing Fraud Reports dataset...")
-            fraud_df = pd.read_csv('datasets/fraud_reports.csv')
-            fraud_df = self.preprocess_dataset(fraud_df, ['description'])
-            fraud_df.to_csv(f'{self.processed_data_dir}/processed_fraud_reports.csv', index=False)
-
-            # Process Transaction Details dataset
-            logging.info("Processing Transaction Details dataset...")
-            transactions_df = pd.read_csv('datasets/transaction_details.csv')
-            transactions_df = self.preprocess_dataset(transactions_df, ['description'])
-            transactions_df.to_csv(f'{self.processed_data_dir}/processed_transactions.csv', index=False)
-
-            logging.info("All datasets processed successfully!")
-
+            cleaned = self.clean_text(text)
+            tokens = self.tokenize(cleaned)
+            processed = self.process_tokens(tokens)
+            return ' '.join(processed)
         except Exception as e:
-            logging.error(f"Error in preprocess_all_datasets: {str(e)}")
+            logging.error(f"Error preprocessing text: {str(e)}")
+            return ""
 
-    def analyze_text_lengths(self, df, text_column):
-        """Analyze text lengths for proper sequence length determination"""
-        lengths = df[text_column].str.len()
-        return {
-            'mean': lengths.mean(),
-            'median': lengths.median(),
-            'std': lengths.std(),
-            '95th_percentile': lengths.quantile(0.95),
-            'max': lengths.max()
+def process_dataset_chunk(args):
+    """Process a chunk of dataset in parallel"""
+    chunk, preprocessor, text_columns = args
+    for col in text_columns:
+        if col in chunk.columns:
+            chunk[f'processed_{col}'] = chunk[col].apply(preprocessor.preprocess_text)
+    return chunk
+
+class BankingDatasetPreprocessor:
+    def __init__(self):
+        self.preprocessor = BankingTextPreprocessor()
+        self.processed_dir = 'processed_datasets'
+        os.makedirs(self.processed_dir, exist_ok=True)
+        
+        # Define text columns for each dataset
+        self.dataset_config = {
+            'user_details': [],
+            'transaction_details': ['description'],
+            'credit_cards': [],
+            'loans': [],
+            'complaints': ['description'],
+            'fraud_reports': ['description'],
+            'faqs': ['question', 'answer'],
+            'assistance': ['query']
         }
 
-def main():
-    logging.info("Starting preprocessing pipeline...")
-    
-    preprocessor = DatasetPreprocessor()
-    preprocessor.preprocess_all_datasets()
-    
-    # Analyze processed datasets
-    logging.info("Analyzing processed datasets...")
-    
-    datasets = {
-        'FAQs': ('processed_datasets/processed_faqs.csv', ['processed_question', 'processed_answer']),
-        'Complaints': ('processed_datasets/processed_complaints.csv', ['processed_description']),
-        'Assistance': ('processed_datasets/processed_assistance.csv', ['processed_query']),
-        'Fraud Reports': ('processed_datasets/processed_fraud_reports.csv', ['processed_description']),
-        'Transactions': ('processed_datasets/processed_transactions.csv', ['processed_description'])
-    }
-    
-    for dataset_name, (file_path, columns) in datasets.items():
+    def preprocess_dataset(self, dataset_name):
+        """Preprocess a single dataset"""
         try:
-            df = pd.read_csv(file_path)
-            for column in columns:
-                stats = preprocessor.analyze_text_lengths(df, column)
-                logging.info(f"\n{dataset_name} - {column} statistics:")
-                for metric, value in stats.items():
-                    logging.info(f"{metric}: {value:.2f}")
+            input_path = f'datasets/{dataset_name}.csv'
+            output_path = f'{self.processed_dir}/processed_{dataset_name}.csv'
+            
+            if not os.path.exists(input_path):
+                logging.warning(f"Dataset {input_path} not found")
+                return
+            
+            logging.info(f"Processing {dataset_name} dataset...")
+            
+            # Read in chunks for memory efficiency
+            chunks = pd.read_csv(input_path, chunksize=10000)
+            processed_chunks = []
+            
+            with ProcessPoolExecutor(max_workers=multiprocessing.cpu_count()-1) as executor:
+                args = [(chunk, self.preprocessor, self.dataset_config[dataset_name]) for chunk in chunks]
+                
+                for result in tqdm(executor.map(process_dataset_chunk, args), desc=f"Processing {dataset_name}"):
+                    processed_chunks.append(result)
+            
+            # Combine and save
+            pd.concat(processed_chunks).to_csv(output_path, index=False)
+            logging.info(f"Saved processed {dataset_name} to {output_path}")
+            
         except Exception as e:
-            logging.error(f"Error analyzing {dataset_name}: {str(e)}")
+            logging.error(f"Error processing {dataset_name}: {str(e)}")
+
+    def preprocess_all_datasets(self):
+        """Preprocess all banking datasets"""
+        for dataset_name in self.dataset_config.keys():
+            self.preprocess_dataset(dataset_name)
+        
+        # Create combined training data from relevant datasets
+        self.create_training_data()
+
+    def create_training_data(self):
+        """Create combined training data from preprocessed datasets"""
+        try:
+            logging.info("Creating combined training data...")
+            
+            # Load and combine relevant datasets
+            dfs = []
+            
+            # FAQs (questions and answers)
+            if os.path.exists(f'{self.processed_dir}/processed_faqs.csv'):
+                faqs = pd.read_csv(f'{self.processed_dir}/processed_faqs.csv')
+                faqs['intent'] = 'faq'
+                dfs.append(faqs[['processed_question', 'processed_answer', 'intent']].rename(columns={'processed_question': 'text', 'processed_answer': 'response'}))
+            
+            # Complaints
+            if os.path.exists(f'{self.processed_dir}/processed_complaints.csv'):
+                complaints = pd.read_csv(f'{self.processed_dir}/processed_complaints.csv')
+                complaints['intent'] = 'complaint'
+                complaints['response'] = 'Thank you for reporting this issue. Our team will look into it.'
+                dfs.append(complaints[['processed_description', 'response', 'intent']].rename(columns={'processed_description': 'text'}))
+            
+            # Assistance queries
+            if os.path.exists(f'{self.processed_dir}/processed_assistance.csv'):
+                assistance = pd.read_csv(f'{self.processed_dir}/processed_assistance.csv')
+                assistance['intent'] = 'assistance'
+                assistance['response'] = 'Our customer support team will contact you shortly.'
+                dfs.append(assistance[['processed_query', 'response', 'intent']].rename(columns={'processed_query': 'text'}))
+            
+            # Fraud reports
+            if os.path.exists(f'{self.processed_dir}/processed_fraud_reports.csv'):
+                fraud = pd.read_csv(f'{self.processed_dir}/processed_fraud_reports.csv')
+                fraud['intent'] = 'fraud'
+                fraud['response'] = 'We take fraud seriously. Our security team will investigate this immediately.'
+                dfs.append(fraud[['processed_description', 'response', 'intent']].rename(columns={'processed_description': 'text'}))
+            
+            # Transaction descriptions
+            if os.path.exists(f'{self.processed_dir}/processed_transaction_details.csv'):
+                transactions = pd.read_csv(f'{self.processed_dir}/processed_transaction_details.csv')
+                transactions['intent'] = 'transaction'
+                transactions['response'] = 'Your transaction details have been recorded.'
+                dfs.append(transactions[['processed_description', 'response', 'intent']].rename(columns={'processed_description': 'text'}))
+            
+            if dfs:
+                combined = pd.concat(dfs, ignore_index=True)
+                combined.to_csv(f'{self.processed_dir}/combined_training_data.csv', index=False)
+                logging.info("Saved combined training data")
+                
+                # Create intent mapping file
+                intent_counts = combined['intent'].value_counts().to_dict()
+                pd.DataFrame({
+                    'intent': list(intent_counts.keys()),
+                    'count': list(intent_counts.values()),
+                    'sample_response': combined.drop_duplicates('intent')['response'].values
+                }).to_csv(f'{self.processed_dir}/intent_mapping.csv', index=False)
+            else:
+                logging.warning("No datasets found to combine for training data")
+                
+        except Exception as e:
+            logging.error(f"Error creating training data: {str(e)}")
+
+def main():
+    preprocessor = BankingDatasetPreprocessor()
+    preprocessor.preprocess_all_datasets()
 
 if __name__ == "__main__":
     main()
